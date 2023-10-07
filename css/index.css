@@ -62,3 +62,10 @@
 .btn:hover {
     transform: scale(1.1);
 }
+
+
+span {
+    color: REd;
+    font-size: 40px;
+    font-weight: 700;
+}
