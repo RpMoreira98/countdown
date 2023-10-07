@@ -20,26 +20,24 @@ stopTimer.addEventListener('click', () => {
     clearInterval(interval)
     sec = 0;
     min = 0;
-    document.getElementById('timer').innerHTML = '00 : 00 : 000';
+    minutesEL.innerText = '00';
+    secondsEl.innerText = '00';
+    milisecondsEl.innerText = '000';
 });
 
 const counter = () => {
-
     mili -=10;
     if (mili == 0) {
         --sec;
         mili = 1000;
     }
-
     if(sec == 0) {
         --min;
         sec = 60;
     }
-
     minutesEL.innerText = formatTime(min);
     secondsEl.innerText = formatTime(sec);
     milisecondsEl.innerText = mili;
-
 };
 
 
@@ -47,8 +45,6 @@ const formatTime = (time) => {
     return time < 10 ? `0${time}`: time;
 }
 
-// const formatMiliseconds = (miliseconds) => {
-//     return miliseconds < 100 ?
-// }
+
 
 
