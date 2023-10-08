@@ -7,7 +7,7 @@ const milisecondsEl = document.getElementById('miliseconds');
 const finaly = document.querySelector('span')
 const timesIsOver = document.querySelector('.bar')
 let sec = 60;
-let min = 1;
+let min = 10;
 let mili = 1000;
 let interval;
 
@@ -27,7 +27,7 @@ pauseTimer.addEventListener('click', () => {
 stopTimer.addEventListener('click', () => {
     clearInterval(interval)
     sec = 60;
-    min = 1;
+    min = 10;
     minutesEL.innerText = '00';
     secondsEl.innerText = '00';
     milisecondsEl.innerText = '000';
@@ -52,7 +52,7 @@ const counter = () => {
 
 
     if (min < 0) {
-        finaly.innerText = 'O tempo acabou!!!'
+        finaly.innerText = 'The time is over! Reset the timer.'
         minutesEL.innerText = '00';
         secondsEl.innerText = '00';
         milisecondsEl.innerText = '000';
